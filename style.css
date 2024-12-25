@@ -1,22 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3f3f3;
+}
+
 .container {
     display: flex;
+    gap: 10px;
     border: 1px solid #f3f3f3;
     background-color: #f3f3f3;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    padding: 0;
+    padding: 10px;
 }
 
 .card {
-    margin: 10px;
-    padding: 0;
     display: flex;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     background-color: #f9f9f9;
-    border: 1px solid;
+    border: 1px solid #ddd;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+}
+
+.card:nth-child(2) {
+    flex-grow: 1;
 }
 
 .card img {
@@ -25,94 +40,64 @@
     border-radius: 50%;
 }
 
-.card:nth-child(1) {
-    flex-grow: 0.2;
-}
-
-.card:nth-child(2) {
-    flex-grow: 2;
-}
-
-.card:nth-child(3) {
-    flex-grow: 0.1;
-}
-
 .card ul {
     display: flex;
-    padding: 0;
-}
-
-.card label {
-    font-size: 20px;
+    list-style-type: none;
+    gap: 15px;
 }
 
 .card li {
-    padding: 0;
-    margin: 10px;
-    list-style: none;
     font-size: 20px;
-}
-
-.card input {
-    font-size: 18px;
-}
-
-li:hover {
-    color: green;
     cursor: pointer;
+}
+
+.card li:hover {
+    color: green;
 }
 
 .disabled {
     color: grey;
-    cursor: not-allowed;
     pointer-events: none;
 }
 
 .batepapo {
     width: 70%;
     height: 700px;
-    border: 1px solid #f9f9f9;
-    border-radius: 20px;
-    box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 1);
+    margin: 40px auto;
     display: flex;
     justify-content: center;
-    align-items: end;
+    align-items: flex-end;
+    border-radius: 20px;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
     background-color: #f9f9f9;
-    margin: auto;
-    margin-top: 40px;
+}
+
+.mensagem {
+    width: 100%;
+    text-align: center;
 }
 
 .mensagem h1 {
-    text-align: center;
-    margin: 40%;
+    margin-bottom: 20px;
+}
+
+.mensagem textarea,
+.mensagem input {
+    width: 80%;
+    margin: 10px auto;
+    padding: 12px;
+    border-radius: 10px;
+    font-size: 16px;
 }
 
 .mensagem textarea {
-    display: flex;
-    width: 67%;
-    position: absolute;
-    left: 50%;
-    top: 53%;
-    height:500px;
-    transform: translate(-50%,-50%);
-    border-radius: 20px;
-    cursor: not-allowed;
-    pointer-events: none;
-}
-
-.mensagem input{
-    width: 1100px;
-    margin: 10px;
-    padding: 12px;
-    border-radius: 10px;
-    font-size: 20px;
+    height: 500px;
+    resize: none;
 }
 
 .mensagem button {
-    width: 160px;
-    padding: 18px;
-    border-radius: 10px;
-    margin: 10px;
+    padding: 12px 30px;
     font-size: 15px;
     cursor: pointer;
+    border-radius: 10px;
 }
